@@ -1,0 +1,85 @@
+.meeting {
+  height: 100vh;
+  display: flex;
+  background: black;
+}
+
+/* VIDEO AREA */
+.video-section {
+  flex: 1;
+  position: relative;
+  background: black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 8px;
+}
+
+
+.video-box {
+  width: 100%;
+  height: calc(100vh - 60px); /* IMPORTANT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  overflow: hidden;
+}
+
+/* CONTROLS */
+.controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(2, 6, 23, 0.95);
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.controls button {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.controls .leave {
+  background: #dc2626;
+  color: white;
+}
+
+/* CHAT */
+.chat {
+  width: 280px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chat h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chat input {
+  padding: 8px;
+}
+
+.chat button {
+  margin-top: 6px;
+  padding: 8px;
+  background: #2563eb;
+  color: white;
+  border: none;
+}

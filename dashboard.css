@@ -1,0 +1,31 @@
+.dashboard {
+  height: 100vh;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.dashboard input {
+  padding: 10px;
+  width: 220px;
+}
+
+.dashboard button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard .logout {
+  background-color: #dc2626;
+  margin-top: 20px;
+}
