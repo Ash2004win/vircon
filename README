@@ -1,0 +1,269 @@
+Perfect 👍
+Below is a **COMPLETE, PROFESSIONAL, INTERVIEW-READY `README.md`** for your **Zoom-like Video Conferencing Application**.
+
+You can **copy-paste this directly** into `README.md` in your GitHub repo.
+
+---
+
+# 📹 Zoom-Like Video Confering Web Application
+
+A **real-time video conferencing web application** built using **React + Vite**, **Agora Web SDK**, and **Firebase**.
+The app supports **secure authentication**, **multi-user video calls**, **screen sharing**, and **real-time chat**, similar to Zoom or Google Meet.
+
+---
+
+## 🚀 Features
+
+✅ User Authentication (Signup & Login)
+✅ Create & Join Meetings using Meeting Code
+✅ Real-time Video & Audio Communication
+✅ Screen Sharing (Start / Stop supported)
+✅ Multi-User Video View
+✅ Real-time Meeting Chat (with usernames)
+✅ Chat auto-clears after meeting ends
+✅ Secure Agora Token Server
+✅ Responsive & User-Friendly UI
+
+---
+
+## 🧱 Tech Stack
+
+### Frontend
+
+* React (Vite)
+* JavaScript
+* Agora RTC Web SDK
+* Firebase Authentication
+* Firebase Firestore
+* CSS (custom styling)
+
+### Backend
+
+* Node.js
+* Express.js
+* Agora Token Server
+
+### Hosting
+
+* Frontend → **Vercel**
+* Backend → **Render**
+* Auth & Chat → **Firebase**
+
+---
+
+## 🏗️ System Architecture
+
+```
+Browser (React + Vite)
+   |
+   |-- Firebase Auth (Login / Signup)
+   |-- Firestore (Meeting Chat)
+   |
+   |-- Agora SDK (Audio / Video / Screen Share)
+   |
+   |-- Backend (Node.js)
+         └── Agora Token Generation
+```
+
+---
+
+## 📂 Project Structure
+
+```
+zoom-clone/
+│
+├── src/
+│   ├── components/
+│   │   └── Chat.jsx
+│   ├── pages/
+│   │   ├── Login.jsx
+│   │   ├── Dashboard.jsx
+│   │   └── Meeting.jsx
+│   ├── styles/
+│   │   ├── auth.css
+│   │   ├── chat.css
+│   │   └── meeting.css
+│   ├── utils/
+│   │   └── firebase.js
+│   └── main.jsx
+│
+├── backend/
+│   ├── server.cjs
+│   └── package.json
+│
+├── .env
+├── package.json
+└── README.md
+```
+
+---
+
+## 🔐 Authentication Flow (Firebase)
+
+1. User signs up using **email & password**
+2. Username is stored using `updateProfile`
+3. Firebase Auth manages sessions
+4. User identity is resolved **once** when meeting starts
+5. Chat messages store **immutable user identity**
+
+---
+
+## 🎥 Video Calling Flow (Agora)
+
+1. User creates or joins a meeting
+2. Frontend requests a token from backend
+3. Backend generates Agora RTC token
+4. Client joins Agora channel
+5. Local audio & video tracks are published
+6. Remote users subscribe automatically
+
+---
+
+## 🖥️ Screen Sharing
+
+* Users can start screen sharing
+* Screen stream replaces camera video
+* Browser “Stop Sharing” is detected via `track-ended`
+* Camera automatically resumes after stopping
+
+---
+
+## 💬 Chat System (Firestore)
+
+* Each meeting has a dedicated Firestore collection
+* Messages contain:
+
+  ```json
+  {
+    "uid": "userId",
+    "name": "username",
+    "text": "message",
+    "createdAt": "timestamp"
+  }
+  ```
+* Chat syncs in real-time using `onSnapshot`
+* Chat is deleted automatically when meeting ends
+
+---
+
+## ⚙️ Environment Variables
+
+### Frontend (`.env`)
+
+```env
+VITE_FIREBASE_API_KEY=xxxx
+VITE_FIREBASE_AUTH_DOMAIN=xxxx
+VITE_FIREBASE_PROJECT_ID=xxxx
+VITE_AGORA_APP_ID=xxxx
+VITE_BACKEND_URL=https://your-backend.onrender.com
+```
+
+### Backend (Render)
+
+```env
+AGORA_APP_ID=xxxx
+AGORA_APP_CERTIFICATE=xxxx
+```
+
+---
+
+## ▶️ Running Locally
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/zoom-clone.git
+cd zoom-clone
+```
+
+### 2️⃣ Install Frontend Dependencies
+
+```bash
+npm install
+npm run dev
+```
+
+### 3️⃣ Start Backend Server
+
+```bash
+cd backend
+npm install
+node server.cjs
+```
+
+---
+
+## ☁️ Deployment Steps
+
+### Frontend (Vercel)
+
+1. Push code to GitHub
+2. Import project in Vercel
+3. Set environment variables
+4. Deploy
+
+### Backend (Render)
+
+1. Create new Web Service
+2. Select backend folder
+3. Set environment variables
+4. Deploy
+
+---
+
+## 🧪 Testing Checklist
+
+✔ Signup & Login works
+✔ Multiple users can join same meeting
+✔ Both users see each other’s video
+✔ Screen sharing works correctly
+✔ Chat syncs across users
+✔ Chat clears after meeting ends
+
+---
+
+## 🧠 Key Learnings
+
+* Real-time communication using Agora RTC
+* Secure token generation using backend
+* Firebase Auth async handling using `onAuthStateChanged`
+* Firestore realtime listeners
+* React lifecycle & cleanup handling
+* Handling RTC edge cases (screen share stop, rejoin, late join)
+
+---
+
+## 🎯 Interview-Ready Explanation
+
+> “I built a Zoom-like video conferencing platform using Agora for real-time audio/video, Firebase for authentication and chat, and React for UI. I handled multi-user synchronization, secure token generation, screen sharing lifecycle, and meeting-scoped realtime chat.”
+
+---
+
+## 📌 Future Enhancements
+
+* Participant list with names
+* Active speaker highlighting
+* Host controls (mute all, remove user)
+* Recording meetings
+* Custom domain support
+
+---
+
+## 👨‍💻 Author
+
+**Ashwin Sujesh**
+Frontend Developer | Full-Stack Enthusiast
+
+🔗 GitHub: [https://github.com/Ash2004win](https://github.com/Ash2004win)
+🔗 LinkedIn: [www.linkedin.com/in/ashwin-sujesh](http://www.linkedin.com/in/ashwin-sujesh)
+
+---
+
+If you want, I can also:
+
+* Make this README **more academic**
+* Add **architecture diagrams**
+* Write a **project description for resume**
+* Convert this into a **case study**
+
+Just tell me 👍
